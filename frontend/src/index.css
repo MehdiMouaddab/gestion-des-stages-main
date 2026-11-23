@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(243, 244, 246);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 20px;
+  border: 1.5px solid rgb(243, 244, 246);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2e2e2e;
+}
+
+#testimontialFrame{
+  background: url('./assets/Home Page Imgs/TestimFrame.svg');
+}
+/* CSS for different slide positions */
+.activeSlide {
+  opacity: 1;
+  display: flex; /* Ensure the active slide is displayed */
+  transition-duration: 1s;
+  z-index: 2;
+}
+
+.nextSlide,
+.lastSlide {
+  opacity: 0;
+  display: none; /* Hide the next and last slides */
+  transition-duration: 1s;
+  z-index: 1; /* Ensure next and last slides are below active slide */
+}
+
